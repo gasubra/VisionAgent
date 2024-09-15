@@ -1,0 +1,11 @@
+version: '3'
+services:
+  streamlit:
+    container_name: visionagent
+    build:
+      dockerfile: ./Dockerfile
+      context: ./examples/chat
+    #volumes:
+      #- ./examples/chat/app.py:/app/app.py
+    ports:
+      - '8501:8501'
